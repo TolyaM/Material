@@ -1,0 +1,118 @@
+﻿<Page x:Class="Material.View.Pages.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Material"
+      mc:Ignorable="d" 
+      d:DesignHeight="495" d:DesignWidth="740"
+      Title="Page8">
+
+    <Grid Background="#f0f0f0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="403*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="82"/>
+            <RowDefinition  Height="30*"/>
+            <RowDefinition  Height="37*"/>
+            <RowDefinition  Height="29*"/>
+            <RowDefinition  Height="3*"/>
+            <RowDefinition  Height="44*"/>
+            <RowDefinition  Height="112*"/>
+            <RowDefinition  Height="43*"/>
+            <RowDefinition  Height="33*"/>
+            <RowDefinition  Height="82"/>
+        </Grid.RowDefinitions>
+
+        <!--Card-->
+        <Border Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="8" Background="#fff" BorderThickness="1" BorderBrush="#b5b5b5"/>
+
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="CALCULATIONS" FontFamily="Bebas Neue Bold" Foreground="#4a4444"/>
+        </Viewbox>
+        <!--Grdient-->
+        <Border Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4" Margin="7 0 7 0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="1,0.5" MappingMode="RelativeToBoundingBox" StartPoint="0,0.5">
+                    <GradientStop Color="#FFFAFAFA" Offset="0"/>
+                    <GradientStop Color="#FF92B9B8" Offset="0.5"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Viewbox  Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock
+                FontFamily="Casper Regular" 
+                FontSize="16"
+                Foreground="#282828"   
+                TextWrapping="Wrap" 
+                >
+                С помощью программы можно:
+                    <LineBreak />
+                - осуществить расчеты женской одежды; 
+                    <LineBreak />
+                - корректировать исходные данные;
+                    <LineBreak />
+                - сохранить расчеты, выбрать конкретные расчеты для 
+                    <LineBreak />
+                 сохранения;
+                    <LineBreak />
+                - верифицировать уже известные данные;
+            </TextBlock>
+        </Viewbox>
+
+        <TextBlock Text="© 2017, Маскалик Анатолий, расчеты женской одежды для WIndows." Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8" FontFamily="Akrobat Regular" FontSize="16" Foreground="#282828 " HorizontalAlignment="Left" VerticalAlignment="Top"/> 
+
+        <!--Тень-->
+        <!--
+        <Border Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="1" Grid.RowSpan="4" Background="#fff">
+            <Border.Effect>
+                <DropShadowEffect Direction="-90" BlurRadius="4" ShadowDepth="2"/>
+            </Border.Effect>
+        </Border>
+
+        -->
+        <!--Header-->
+        <!--
+        <Border Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="1" Background="#458a62"/>
+        
+        <Viewbox Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" MaxWidth="600">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Source="Images\Logo\Logo.png" Width="40" RenderOptions.BitmapScalingMode="Fant"/>
+                <TextBlock Text="CALCULTIONS" FontFamily="Akrobat Bold" Foreground="#fff" FontSize="40" VerticalAlignment="Center" Margin="30 0 0 0"/>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" MaxWidth="535" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Text="Расчеты женской одежды для WIndows." FontFamily="Akrobat Bold" FontSize="18" Foreground="#282828" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        </Viewbox>
+        
+        <Viewbox  Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="3" VerticalAlignment="Top" MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock
+                FontFamily="Akrobat Bold" 
+                FontSize="18"
+                Foreground="#282828"   
+                TextWrapping="Wrap"
+                >
+                С помощью программы можно:
+                    <LineBreak />
+                - осуществить расчеты женской одежды; 
+                    <LineBreak />
+                - корректировать исходные данные;
+                    <LineBreak />
+                - сохранить расчеты, выбрать конкретные расчеты для сохранения;
+                    <LineBreak />
+                - верифицировать уже известные данные;
+            </TextBlock>
+        </Viewbox>
+        
+        <TextBlock Text="© 2017, Маскалик Анатолий" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" FontFamily="Akrobat Regular" FontSize="18" Foreground="#282828 " HorizontalAlignment="Left"/>-->
+    </Grid>
+</Page>

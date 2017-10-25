@@ -1,0 +1,100 @@
+﻿<Page x:Class="Material.View.Pages.CoatCalculations"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Material"
+      mc:Ignorable="d" 
+      d:DesignHeight="437" d:DesignWidth="740"
+      Title="Page5">
+
+    <Grid Background="#f0f0f0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13" />
+            <RowDefinition Height="67"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="13" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Header-->
+        <Border Grid.Column="1" Grid.Row="1" Background="#5f6866">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF8D908F" Opacity="0.395" Direction="-90" ShadowDepth="2" BlurRadius="2"/>
+            </Border.Effect>
+            <TextBlock Text="Расчеты: Пальто" FontFamily="Akrobat Black" Foreground="#fff" FontSize="16" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <!--Header Column Grid-->
+        <Border Grid.Column="1" Grid.Row="2" Background="#fff">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF8D908F" Opacity="0.395" Direction="-90" ShadowDepth="2" BlurRadius="2"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.3*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" >Номер системы</TextBlock>
+                <TextBlock Grid.Column="1" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center">Отрезок</TextBlock>
+                <TextBlock Grid.Column="2" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 20 0">Формула</TextBlock>
+                <TextBlock Grid.Column="3" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 20 0">Ответ</TextBlock>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="4" Background="#fff">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF595959" ShadowDepth="2" BlurRadius="9" Direction="-90"/>
+            </Border.Effect>
+            <!--Elements-->
+            <ScrollViewer>
+                <ListView ItemsSource="{Binding CalculationModel}" Padding="0 0 0 6">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <GroupItem>
+                                <Border Height="70" Margin="6 7 6 0" Background="#fff" CornerRadius="2" BorderBrush="#89404643" BorderThickness="0,0,0,1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1.3*"/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding SystemNumber}"></TextBlock>
+                                        <TextBlock Grid.Column="1" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding LineSegment}"></TextBlock>
+                                        <TextBlock Grid.Column="2" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Formula}"></TextBlock>
+                                        <TextBlock Grid.Column="3" FontSize="18" FontFamily="Akrobat Regular" Foreground="#6b6b6b" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0" Text="{Binding Answer}"></TextBlock>
+                                    </Grid>
+                                </Border>
+                            </GroupItem>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>
