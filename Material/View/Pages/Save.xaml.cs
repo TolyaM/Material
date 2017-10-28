@@ -23,13 +23,11 @@ namespace Material.View.Pages
     /// <summary>
     /// Логика взаимодействия для Page7.xaml
     /// </summary>
-    public partial class Save : Page
-    {
-        
+    public partial class Save : System.Windows.Controls.Page
+    { 
         public Save()
         {
             InitializeComponent();
         }
-
     }
 }

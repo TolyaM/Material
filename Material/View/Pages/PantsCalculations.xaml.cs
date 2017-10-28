@@ -26,8 +26,7 @@ namespace Material.View.Pages
         public PantsCalculations()
         {
             InitializeComponent();
-            this.DataContext = new PantsCalculationsViewModel();
-
+            //this.DataContext = new PantsCalculationsViewModel();
         }
 
     }

@@ -26,7 +26,7 @@ namespace Material.View.Pages
         public CoatPage()
         {
             InitializeComponent();
-            this.DataContext = new CoatViewModel();
+            //this.DataContext = new CoatViewModel();
         }
 
         private void T7_PreviewTextInput(object sender, TextCompositionEventArgs e)

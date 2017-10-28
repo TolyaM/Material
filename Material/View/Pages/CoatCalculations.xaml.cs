@@ -26,8 +26,7 @@ namespace Material.View.Pages
         public CoatCalculations()
         {
             InitializeComponent();
-            this.DataContext = new CoatCalculationsViewModel();
-
+            //this.DataContext = new CoatCalculationsViewModel();
         }
 
     }

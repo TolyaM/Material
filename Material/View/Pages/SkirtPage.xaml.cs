@@ -25,7 +25,7 @@ namespace Material.View.Pages
         public SkirtPage()
         {
             InitializeComponent();
-            this.DataContext = new SkirtViewModel();
+            //this.DataContext = new SkirtViewModel();
             
         }
 
@@ -57,55 +57,30 @@ namespace Material.View.Pages
 
         private void DataPreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            var s = e.Source as TextBox;
+            if (s == null) return;
+            switch (e.Key)
             {
-                TextBox s = e.Source as TextBox;
-                if (s != null)
-                {
+                case Key.Enter:
                     s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
-                }
-                e.Handled = true;
-            }
-
-            if(e.Key == Key.Right)
-            {
-                TextBox s = e.Source as TextBox;
-                if (s != null)
-                {
+                    break;
+                case Key.Right:
                     s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Right));
-                }
-                e.Handled = true;
-            }
-
-            if (e.Key == Key.Left)
-            {
-                TextBox s = e.Source as TextBox;
-                if (s != null)
-                {
+                    break;
+                case Key.Left:
                     s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Left));
-                }
-                e.Handled = true;
-            }
-
-            if (e.Key == Key.Up)
-            {
-                TextBox s = e.Source as TextBox;
-                if (s != null)
-                {
+                    break;
+                case Key.Up:
                     s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Up));
-                }
-                e.Handled = true;
-            }
-
-            if (e.Key == Key.Down)
-            {
-                TextBox s = e.Source as TextBox;
-                if (s != null)
-                {
+                    break;
+                case Key.Down:
                     s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Down));
-                }
-                e.Handled = true;
+                    break;
+                default:
+                    e.Handled = false;
+                    return;
             }
+            e.Handled = true;
         }
     }
 }

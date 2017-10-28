@@ -11,8 +11,7 @@ namespace Material.View.Pages
         public SkirtCalculations()
         {
             InitializeComponent();
-            this.DataContext = new SkirtCalculationsViewModel();
+            //this.DataContext = new SkirtCalculationsViewModel();
         }
-
     }
 }

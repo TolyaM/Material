@@ -21,6 +21,14 @@ namespace Material.ViewModel
         //public delegate void InputDataCollectionChangedEventHandler(IList<string> inputDataCollection);
         //public event InputDataCollectionChangedEventHandler InputDataCollectionChanged;
 
+        public SkirtCalculationsViewModel CalculationsViewModel
+        {
+            get
+            {
+                return new SkirtCalculationsViewModel(_skirtT, _skirtP);
+            }
+        }
+
         #region Constructor
         public SkirtViewModel()
         {

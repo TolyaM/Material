@@ -98,5 +98,6 @@
                 </ListView>
             </ScrollViewer>
         </Border>
+        <Button Command="{Binding TestData}"/>
     </Grid>
 </Page>

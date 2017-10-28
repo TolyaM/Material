@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using Material.Model;
+﻿using Material.Model;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Messaging;
+using System.Windows.Input;
+using System.Windows;
 
 namespace Material.ViewModel
 {
     class SkirtCalculationsViewModel : INotifyPropertyChanged 
     {
+        public SkirtCalculationsViewModel(ObservableCollection<Skirt> _skirtT, ObservableCollection<Skirt> _skirtP)
+        {
+
+        }
+
         #region Private Variables
         private ObservableCollection<CalculationModel> _calculationmodel;
-        public Skirt _curSkirt;
+        private ObservableCollection<Skirt> _skT = new ObservableCollection<Skirt>();
         #endregion
 
         //static SkirtViewModel ObjectSkirtVM;
@@ -78,8 +79,17 @@ namespace Material.ViewModel
         #region Events
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
-
         #region Command
+        public ICommand TestData
+        {
+            get
+            {
+                return new DelegateCommand(o =>
+                {
+                    MessageBox.Show("" + _skT[1].InputData);
+                });
+            }
+        }
         #endregion
 
         #region Private Methods

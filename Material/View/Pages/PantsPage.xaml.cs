@@ -26,7 +26,7 @@ namespace Material.View.Pages
         public PantsPage()
         {
             InitializeComponent();
-            this.DataContext = new PantsViewModel();
+            //this.DataContext = new PantsViewModel();
         }
 
         private void T7_PreviewTextInput(object sender, TextCompositionEventArgs e)
